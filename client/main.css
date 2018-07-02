@@ -1,0 +1,51 @@
+/*@import '/imports/ui/stylesheets/ListEvents.css'; //Fix this imports function */
+
+body {
+  font-family: sans-serif;
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-attachment: fixed;
+
+  color: black;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/*Events */
+a.event-name {
+  color: black;
+  font-size: 18px;
+  font-weight:  bold;
+}
+
+h1.event-head {
+  color: white;
+  font-weight: bold;
+  margin: 20px 100px;
+}
+/*End of events*/
+
+/*Top Nav Bar */
+a {
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/*End of top navbar */
+
+/* HomePage */
+.jumbotron {
+  margin-top: 50px;
+}
+/* End of HomePage */
