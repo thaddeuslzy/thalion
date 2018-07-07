@@ -82,7 +82,6 @@ class AddEvent extends Component {
     //Temporary solution to hide AddEvent option for non-admins
     let user = Meteor.userId();
     let isAdmin = user === 'eDguEkfoH886CWyLq';
-
     return (
       <div>
         <div className="text-center">
