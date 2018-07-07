@@ -46,6 +46,6 @@ a {
 
 /* HomePage */
 .jumbotron {
-  margin-top: 50px;
+  padding-top: 70px; /*bootstrap navbar is 50px */
 }
 /* End of HomePage */
