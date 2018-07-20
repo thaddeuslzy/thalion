@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import AddEvent from "/imports/ui/AddEvent.js";
-import ListEvents from "/imports/ui/ListEvents.js";
+import AddEvent from "/imports/ui/events/AddEvent.js";
+import ListEvents from "/imports/ui/events/ListEvents.js";
 import { Events } from "/imports/api/events.js";
 import TopNavBar from '/imports/ui/partials/TopNavBar.js';
+import ReactQuill from 'react-quill';
+import Helmet, { HelmetProvider } from 'react-helmet-async';
+import { Meteor } from 'meteor/meteor';
 
 class EventsPage extends Component {
   constructor(props) {
+    //No props here... This is the parent component of Events
     super(props);
     this.state = {
       isUpdating: false,
@@ -28,11 +32,22 @@ class EventsPage extends Component {
   //Use the package alanning:roles
 
   render() {
+    /*let isAdmin = false; 
+    //If logged in
+    if(Meteor.userId()) {
+      isAdmin = Meteor.users.username === 'lionelat';
+      console.log('Add event console log');
+    } else {
+      console.log('not logged in yet...');*/
     return (
       <div>
-        {/*
-          we pass down the event and isUpdating flag as props in the AddEvent component
-        */}
+        <HelmetProvider>
+          <Helmet>
+            <title>Events</title>
+          </Helmet>
+        </HelmetProvider>
+
+        {/*We pass down the event and isUpdating flag as props in the AddEvent component*/}
         <TopNavBar />
 
         <AddEvent

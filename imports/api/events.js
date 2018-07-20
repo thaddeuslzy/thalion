@@ -1,16 +1,27 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/meteor';
+import ReactDOM from 'react-dom';
 
-//// Creates a new Mongo collection and exports it
+//Can put this in collections folder also...
+
+// Creates a new Mongo collection and exports it (export vs export default)
+// A collection is an array of objects; each object has a variety of properties which describe the particular event
 export const Events = new Mongo.Collection('events');
 
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('events', function tasksPublication() {
-    return Events.find();
+    //return Events.find({}, { limit:20}); //publishes only the first 20 events
+    return Events.find(); //returns a cursor
   });
 }
+
+//Other properties possible to add: 
+//createdAt --> to sort events according to created time
+//ownerID --> ID of the user who created this event
+//sharedWith --> array of emails of people who have access to this event
+//content--> this could be in the event description page (lecture 101)
 
 //Accessible to both client and server
 Meteor.methods({
@@ -23,7 +34,7 @@ Meteor.methods({
 		if (! this.userId) {
       		throw new Meteor.Error('not-authorized');
     	}
-
+		
 		Events.insert({
 	        title,
 	        description,
@@ -36,13 +47,13 @@ Meteor.methods({
 		check(title, String);
 		check(description, String);
 		check(date, String);*/
-
 		Events.update(eventId, {
         $set: {
           title,
           description,
           date
         }
+        //A meteor modifier
       });
 	},
 

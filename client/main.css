@@ -49,3 +49,11 @@ a {
   padding-top: 70px; /*bootstrap navbar is 50px */
 }
 /* End of HomePage */
+
+/*Login buttons*/
+#login-buttons {
+  margin: 18px;
+  margin-right: 70px;
+  font-size: 14px;
+}
+/* End of login buttons */
