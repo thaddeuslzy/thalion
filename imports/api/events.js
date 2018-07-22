@@ -17,11 +17,11 @@ if (Meteor.isServer) {
   });
 }
 
-//Other properties possible to add: 
+//Other possible properties to add: 
 //createdAt --> to sort events according to created time
 //ownerID --> ID of the user who created this event
 //sharedWith --> array of emails of people who have access to this event
-//content--> this could be in the event description page (lecture 101)
+//content--> this would be the React Quill content from Event Details (lecture 101)
 
 //Accessible to both client and server
 Meteor.methods({
@@ -33,13 +33,14 @@ Meteor.methods({
 		//Make sure user is logged in before inserting a task
 		if (! this.userId) {
       		throw new Meteor.Error('not-authorized');
-    	}
+    }
 		
 		Events.insert({
-	        title,
-	        description,
-	        date
-      	});
+	    title,
+	    description,
+	    date,
+	    content: '' 
+    });
 	},
 	
 	'events.update'(eventId, title, description, date) {
@@ -55,6 +56,13 @@ Meteor.methods({
         }
         //A meteor modifier
       });
+	},
+
+	//Called in EventEditor
+	'events.updateContent'(eventId, content) {
+		Events.update(eventId, {
+			$set: {content}
+		})
 	},
 
 	'events.remove'(eventId) {

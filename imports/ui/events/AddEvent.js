@@ -9,8 +9,13 @@ import { withTracker } from 'meteor/react-meteor-data';
 class AddEvent extends Component {
   constructor(props) {
     super(props);
+    const event = {
+      title: props.event.title,
+      description: props.event.description,
+      date: props.event.date
+    };
     this.state = { 
-      event: props.event,
+      event: event,
       isUpdating: props.isUpdating
     }
     //this.handleChange = this.handleChange.bind(this);
@@ -38,20 +43,6 @@ class AddEvent extends Component {
     this.setState({
       event: newEvent
     })
-  }
-
-  //For Quill editor
-  handleEditorChange = (event) => { //html value
-    //const newEvent = Object.assign({}, this.state.event, {description: event});
-
-    const newEvent = {
-      title: this.state.event.title,
-      description: event,
-      date: this.state.event.date
-    }
-    this.setState({   
-      event: newEvent
-    });
   }
 
   handleSubmit = (event) => {
@@ -105,7 +96,6 @@ class AddEvent extends Component {
 
     return (
       <div>
-        
         <div className="text-center">
           <h4>OYP Events</h4>
         </div>

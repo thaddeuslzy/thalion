@@ -5,6 +5,8 @@ import TopNavBar from '/imports/ui/partials/TopNavBar.js';
 import { Events } from "/imports/api/events.js";
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import Helmet, { HelmetProvider } from 'react-helmet-async';
+import EventEditor from '/imports/ui/events/EventEditor.js';
+import NotFound from '/imports/ui/layouts/NotFound.js'
 
 class EventDetails extends Component {
 	//componentWillMount --> a lifecycle method; eg to declare a starting variable when the component mounts
@@ -14,7 +16,7 @@ class EventDetails extends Component {
 		if(!this.props.event) {
 			return (
 				<div>
-					Loading...
+					<NotFound />
 				</div>
 			);
 		}
@@ -29,11 +31,15 @@ class EventDetails extends Component {
 				<h1 style={{ margin: "50px 0px" }}>
 					{this.props.event.title}
 				</h1>
+				<EventEditor event={this.props.event}/>
+
+				<div>
+					<div dangerouslySetInnerHTML={{__html: this.props.event.content }}></div>
+				</div>
 			</div>
 		);
 	}
 }
-
 
 export default withTracker(() => {
   //Or...this.props.params.id

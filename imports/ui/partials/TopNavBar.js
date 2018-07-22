@@ -57,12 +57,13 @@ class TopNavBar extends Component {
 			      </ul>
 			      
 			      <ul className="nav navbar-nav navbar-right">
+			      	{/*<li><a onClick={() => FlowRouter.go('/login')}>Account</a></li>*/}
 			      	<li className="dropdown">
-			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span className="caret"></span></a>
+			          <a href="/login" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span className="caret"></span></a>
 			          <ul className="dropdown-menu">
 			            <li><AccountsUIWrapper /></li>
 			          </ul>
-			        </li>    
+			        </li>
 			      </ul>	
 
 			    </div> {/* /.navbar-collapse */}

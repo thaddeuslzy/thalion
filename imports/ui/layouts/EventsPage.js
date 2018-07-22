@@ -3,7 +3,6 @@ import AddEvent from "/imports/ui/events/AddEvent.js";
 import ListEvents from "/imports/ui/events/ListEvents.js";
 import { Events } from "/imports/api/events.js";
 import TopNavBar from '/imports/ui/partials/TopNavBar.js';
-import ReactQuill from 'react-quill';
 import Helmet, { HelmetProvider } from 'react-helmet-async';
 import { Meteor } from 'meteor/meteor';
 
