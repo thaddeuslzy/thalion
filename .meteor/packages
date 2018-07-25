@@ -26,4 +26,5 @@ alanning:roles
 kadira:flow-router
 twbs:bootstrap
 arillo:flow-router-helpers
-std:accounts-ui
+#std:accounts-ui
+meteoreact:accounts

@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // ES6
 import { withTracker } from 'meteor/react-meteor-data';
+import { Roles } from 'meteor/alanning:roles';
 
 class AddEvent extends Component {
   constructor(props) {
@@ -86,13 +87,14 @@ class AddEvent extends Component {
   render() {
     const { event } = this.state;
     
-    let isAdmin = false; 
+    /*let isAdmin = false; 
     //If logged in
     if(this.props.currentUser)  {
       isAdmin = this.props.currentUser.username === 'lionelat';
     } else {
       console.log('not logged in yet...');
-    }
+    }*/
+    let isAdmin = Roles.userIsInRole(this.props.currentUser, 'admin');
 
     return (
       <div>

@@ -2,13 +2,29 @@
 import React, { Component } from 'react';
 import AccountsUIWrapper from '/imports/ui/AccountsUIWrapper.js';
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Meteor } from 'meteor/meteor';
 
 class TopNavBar extends Component {
-	onAccountClick(event) {
-		//Prevents the browser from trying to navigate to that link, when it is clicked
-		event.preventDefault();
+	renderLogoutButton() {
+		//Render button only if logged in
+		if(this.props.currentUser) {
+			return (<a onClick={this.logout}
+								className="logout">Logout</a>);
+		}
+		return (<a></a>);
 	}
-	
+
+	logout(event) {
+		event.preventDefault();
+		Meteor.logout( (err) => {
+			if (err) {
+				console.log(err.reason);
+			} else {
+				FlowRouter.go('/');
+			}
+		});
+	}
 	render() {
 		return (
 		  	<nav className="navbar navbar-default navbar-fixed-top">
@@ -52,18 +68,16 @@ class TopNavBar extends Component {
 			            <li><a href="#">Vinea Domini</a></li>
 			          </ul>
 			        </li>
-
-			        <li><a href="#">Prayers</a></li>
 			      </ul>
 			      
 			      <ul className="nav navbar-nav navbar-right">
-			      	{/*<li><a onClick={() => FlowRouter.go('/login')}>Account</a></li>*/}
-			      	<li className="dropdown">
+			      	<li>{this.renderLogoutButton()}</li>
+			      	{/*<li className="dropdown">
 			          <a href="/login" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span className="caret"></span></a>
 			          <ul className="dropdown-menu">
 			            <li><AccountsUIWrapper /></li>
 			          </ul>
-			        </li>
+			        </li>*/}
 			      </ul>	
 
 			    </div> {/* /.navbar-collapse */}
@@ -76,4 +90,10 @@ class TopNavBar extends Component {
 	}
 }
 
-export default TopNavBar;
+//export default TopNavBar;
+
+export default withTracker(() => {
+  return {
+    currentUser: Meteor.user()
+  }
+})(TopNavBar);
