@@ -44,6 +44,7 @@ class TopNavBar extends Component {
 			      <ul className="nav navbar-nav">
 			        
 			        <li><a onClick={() => FlowRouter.go('/about')}>About Us</a></li>
+
 			        <li><a onClick={() => FlowRouter.go('/events')}>Events</a></li>
 
 			        <li className="dropdown">
@@ -58,7 +59,7 @@ class TopNavBar extends Component {
 			        </li>
 
 			        <li className="dropdown">
-			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family</a>
+			          <a onClick={() => FlowRouter.go('/family')} className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family</a>
 			          <ul className="dropdown-menu">
 			            <li><a href="#">Come As You Are</a></li>
 			            <li><a href="#">Polytechnic Communities</a></li>

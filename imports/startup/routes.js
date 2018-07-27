@@ -10,7 +10,8 @@ import AboutPage from '/imports/ui/layouts/AboutPage.js';
 import EventDetails from '/imports/ui/events/EventDetails.js';
 import NotFound from '/imports/ui/layouts/NotFound.js';
 import LoginPage from '/imports/ui/layouts/LoginPage.js';
-import ArticlesPage from '/imports/ui/layouts/ArticlesPage.js'
+import ArticlesPage from '/imports/ui/layouts/ArticlesPage.js';
+import FamilyPage from '/imports/ui/layouts/FamilyPage.js';
 
 FlowRouter.route('/', {
   name: 'Home',
@@ -40,6 +41,13 @@ FlowRouter.route('/events/:id', {
   name: 'Event-Details',
   action(){
     ReactDOM.render(<EventDetails />, document.getElementById('app'));
+  }
+});
+
+FlowRouter.route('/family', {
+  name: 'Family',
+  action(){
+    ReactDOM.render(<FamilyPage />, document.getElementById('app'));
   }
 });
 
