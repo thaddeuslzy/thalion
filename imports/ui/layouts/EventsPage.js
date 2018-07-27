@@ -31,13 +31,6 @@ class EventsPage extends Component {
   //Use the package alanning:roles
 
   render() {
-    /*let isAdmin = false; 
-    //If logged in
-    if(Meteor.userId()) {
-      isAdmin = Meteor.users.username === 'lionelat';
-      console.log('Add event console log');
-    } else {
-      console.log('not logged in yet...');*/
     return (
       <div>
         <HelmetProvider>

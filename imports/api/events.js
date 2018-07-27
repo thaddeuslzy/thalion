@@ -32,7 +32,7 @@ Meteor.methods({
 
 		//Make sure user is logged in before inserting a task
 		if (! this.userId) {
-      		throw new Meteor.Error('not-authorized');
+      throw new Meteor.Error('not-authorized');
     }
 		
 		Events.insert({
@@ -49,13 +49,13 @@ Meteor.methods({
 		check(description, String);
 		check(date, String);*/
 		Events.update(eventId, {
-        $set: {
-          title,
-          description,
-          date
-        }
+      $set: {
+        title,
+        description,
+        date
+      }
         //A meteor modifier
-      });
+    });
 	},
 
 	//Called in EventEditor

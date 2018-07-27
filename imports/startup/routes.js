@@ -10,6 +10,7 @@ import AboutPage from '/imports/ui/layouts/AboutPage.js';
 import EventDetails from '/imports/ui/events/EventDetails.js';
 import NotFound from '/imports/ui/layouts/NotFound.js';
 import LoginPage from '/imports/ui/layouts/LoginPage.js';
+import ArticlesPage from '/imports/ui/layouts/ArticlesPage.js'
 
 FlowRouter.route('/', {
   name: 'Home',
@@ -51,6 +52,13 @@ FlowRouter.route('/login' , {
     } else {
       ReactDOM.render(<LoginPage />, document.getElementById('app'));
     }
+  }
+});
+
+FlowRouter.route('/articles', {
+  name:'Articles-Page',
+  action() {
+    ReactDOM.render(<ArticlesPage />, document.getElementById('app'));
   }
 });
 

@@ -1,0 +1,1 @@
+//React Quill Component to edit content of article

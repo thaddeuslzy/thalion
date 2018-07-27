@@ -27,9 +27,8 @@ class TopNavBar extends Component {
 	}
 	render() {
 		return (
-		  	<nav className="navbar navbar-default navbar-fixed-top">
+			<nav className="navbar navbar-default navbar-fixed-top">
 			  <div className="container-fluid">
-			    {/* Brand and toggle get grouped for better mobile display */}
 			    <div className="navbar-header">
 			      <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 			        <span className="sr-only">Toggle navigation</span>
@@ -46,11 +45,11 @@ class TopNavBar extends Component {
 			        
 			        <li><a onClick={() => FlowRouter.go('/about')}>About Us</a></li>
 			        <li><a onClick={() => FlowRouter.go('/events')}>Events</a></li>
-			        
+
 			        <li className="dropdown">
-			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Soul Food<span className="caret"></span></a>
+			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Soul Food</a>
 			          <ul className="dropdown-menu">
-			            <li><a href="#">Articles</a></li>
+			            <li><a href="/articles">Articles</a></li>
 			            <li><a href="#">OYP Bulletin</a></li>
 			            <li><a href="#">Testimonies</a></li>
 			            <li><a href="#">Recommended Resources</a></li>
@@ -59,7 +58,7 @@ class TopNavBar extends Component {
 			        </li>
 
 			        <li className="dropdown">
-			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family<span className="caret"></span></a>
+			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family</a>
 			          <ul className="dropdown-menu">
 			            <li><a href="#">Come As You Are</a></li>
 			            <li><a href="#">Polytechnic Communities</a></li>
@@ -73,7 +72,7 @@ class TopNavBar extends Component {
 			      <ul className="nav navbar-nav navbar-right">
 			      	<li>{this.renderLogoutButton()}</li>
 			      	{/*<li className="dropdown">
-			          <a href="/login" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span className="caret"></span></a>
+			          <a href="/login" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
 			          <ul className="dropdown-menu">
 			            <li><AccountsUIWrapper /></li>
 			          </ul>
@@ -85,7 +84,6 @@ class TopNavBar extends Component {
 			  </div> {/*/.container-fluid*/}
 
 			</nav>
-				
   		);
 	}
 }

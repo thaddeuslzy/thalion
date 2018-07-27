@@ -26,7 +26,7 @@ class EventEditor extends Component {
 
   render() {
     return (
-      <div className="col-xs-8">
+      <div className="editor">
       	<form onSubmit={this.handleSubmit.bind(this)}>
 	      	<div>
 	      		<ReactQuill value={this.state.text}

@@ -2,20 +2,15 @@
 
 body {
   font-family: sans-serif;
+  /*background-color: F5FFFA;*/
   background-color: #315481;
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
   background-attachment: fixed;
 
   color: black;
 
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  padding: 0;
-  margin: 0;
+  padding-top: 50px;
+  margin-bottom: 50px;
 
   font-size: 14px;
 }
@@ -32,7 +27,17 @@ h1.event-head {
   font-weight: bold;
   margin: 20px 100px;
 }
+
 /*End of events*/
+
+/*EventEditor */
+.editor {
+  width: 80%;
+}
+/*End of EventEditor*/
+
+/*EventDetails*/
+/*End of EventDetails*/
 
 /*Top Nav Bar */
 a {
@@ -57,3 +62,10 @@ a {
   font-size: 14px;
 }
 /* End of login buttons */
+
+/* Image */
+img {
+  width: 100%;
+  height: auto;
+}
+/*End of image*/
