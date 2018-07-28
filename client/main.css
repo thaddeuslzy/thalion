@@ -3,13 +3,16 @@
 body {
   font-family: sans-serif;
   /*background-color: F5FFFA;*/
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-  background-attachment: fixed;
+  /* background-color: white;
+  background-attachment: fixed; */
+
+  background-color: white;
+  /* background-image: linear-gradient(to bottom, #C2C2C2, #918e82 100%); */
+  background-attachment: fixed; 
 
   color: black;
 
-  padding-top: 50px;
+  padding-top: 10px;
   margin-bottom: 50px;
 
   font-size: 14px;
@@ -44,13 +47,80 @@ a {
   cursor: pointer;
 }
 
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 /*End of top navbar */
 
 /* HomePage */
+<<<<<<< HEAD
+=======
+.jumbotron {
+  padding-top: 70px; /*bootstrap navbar is 50px */
+  margin-top: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  background-image: url(/images/background1.jpg);
+}
+
+
+.captionbody {
+  font-size: 18px;
+  color: #777;
+  
+}
+
+.homebody {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: grey;
+  justify-content: center;
+}
+
+.homehead {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+}
+
+hr.gradient {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+>>>>>>> 0bbdcaede808c31efec9864bcbcdd91fb61ae30b
 /* End of HomePage */
+
+/* Button and Thumbnail */
+
+.thumbnail {
+  border: none;
+  border-radius: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.thumbnail p {
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #777;
+  color: lightgrey;
+  border-radius: 0;
+  transition: .2s;
+}
+.btn:hover, .btn:focus {
+  border: 1px solid #333;
+  background-color: lightgrey;
+  color: darkgrey;
+}
+/* End of Buttong and Thumbnail */
 
 /*Login buttons*/
 #login-buttons {
@@ -66,3 +136,24 @@ img {
   height: auto;
 }
 /*End of image*/
+<<<<<<< HEAD
+=======
+
+/* About page individual photo frames */
+.profile {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+}
+.person:hover {
+  border-color: #f1f1f1;
+}
+
+>>>>>>> 0bbdcaede808c31efec9864bcbcdd91fb61ae30b

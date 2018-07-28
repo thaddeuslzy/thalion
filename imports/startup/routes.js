@@ -11,7 +11,11 @@ import EventDetails from '/imports/ui/events/EventDetails.js';
 import NotFound from '/imports/ui/layouts/NotFound.js';
 import LoginPage from '/imports/ui/layouts/LoginPage.js';
 import ArticlesPage from '/imports/ui/layouts/ArticlesPage.js';
+<<<<<<< HEAD
 import ArticleContent from '/imports/ui/soulFood/ArticleContent.js';
+=======
+import FamilyPage from '/imports/ui/layouts/FamilyPage.js';
+>>>>>>> 0bbdcaede808c31efec9864bcbcdd91fb61ae30b
 
 FlowRouter.route('/', {
   name: 'Home',
@@ -41,6 +45,13 @@ FlowRouter.route('/events/:id', {
   name: 'Event-Details',
   action(){
     ReactDOM.render(<EventDetails />, document.getElementById('app'));
+  }
+});
+
+FlowRouter.route('/family', {
+  name: 'Family',
+  action(){
+    ReactDOM.render(<FamilyPage />, document.getElementById('app'));
   }
 });
 
