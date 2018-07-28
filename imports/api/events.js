@@ -25,7 +25,7 @@ if (Meteor.isServer) {
 
 //Accessible to both client and server
 Meteor.methods({
-	'events.insert'(title, description, date) {
+	'events.insert'(title, description, date, cost) {
 		/*check(title, String);
 		check(description, String);
 		check(date, String);*/
@@ -39,11 +39,12 @@ Meteor.methods({
 	    title,
 	    description,
 	    date,
+	    cost,
 	    content: '' 
     });
 	},
 	
-	'events.update'(eventId, title, description, date) {
+	'events.update'(eventId, title, description, date, cost) {
 		/*check(eventId, String);
 		check(title, String);
 		check(description, String);
@@ -52,7 +53,8 @@ Meteor.methods({
       $set: {
         title,
         description,
-        date
+        date,
+        cost
       }
         //A meteor modifier
     });

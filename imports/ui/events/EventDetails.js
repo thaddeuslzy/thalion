@@ -66,7 +66,7 @@ class EventDetails extends Component {
 			            <p>Singapore 536449</p> <hr />
 
 			            <h4 className="font-italic"><strong>Cost: </strong></h4>
-			            <small>Free</small> <hr />
+			            <small>{this.props.event.cost}</small> <hr />
                 </div>
               </div>
             </div>
