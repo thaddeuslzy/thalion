@@ -50,10 +50,7 @@ class TopNavBar extends Component {
 			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Soul Food</a>
 			          <ul className="dropdown-menu">
 			            <li><a href="/articles">Articles</a></li>
-			            <li><a href="#">OYP Bulletin</a></li>
-			            <li><a href="#">Testimonies</a></li>
-			            <li><a href="#">Recommended Resources</a></li>
-			            <li><a href="#">Videos</a></li>
+			            <li><a href="/testimonies">Testimonies</a></li>
 			          </ul>
 			        </li>
 

@@ -12,6 +12,8 @@ import NotFound from '/imports/ui/layouts/NotFound.js';
 import LoginPage from '/imports/ui/layouts/LoginPage.js';
 import ArticlesPage from '/imports/ui/layouts/ArticlesPage.js';
 import ArticleContent from '/imports/ui/soulFood/ArticleContent.js';
+import TestimonyPage from '/imports/ui/layouts/TestimonyPage.js';
+import TestimonyContent from '/imports/ui/soulFood/testimonies/TestimonyContent.js';
 
 FlowRouter.route('/', {
   name: 'Home',
@@ -69,6 +71,21 @@ FlowRouter.route('/articles/:id', {
     ReactDOM.render(<ArticleContent />, document.getElementById('app'));
   }
 });
+
+FlowRouter.route('/testimonies', {
+  name:'Testimony-Page',
+  action() {
+    ReactDOM.render(<TestimonyPage />, document.getElementById('app'));
+  }
+});
+
+FlowRouter.route('/testimonies/:id', {
+  name: 'Testimony-Content',
+  action(){
+    ReactDOM.render(<TestimonyContent />, document.getElementById('app'));
+  }
+});
+
 FlowRouter.notFound = {
   action() {
     ReactDOM.render(<NotFound />, document.getElementById('app'));

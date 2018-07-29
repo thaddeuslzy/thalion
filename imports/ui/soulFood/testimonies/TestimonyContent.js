@@ -1,12 +1,12 @@
-//This is a dynamic articles page
+//This is a dynamic testimonies page
 import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import TopNavBar from '/imports/ui/partials/TopNavBar.js';
-import { Articles } from "/imports/api/articles.js";
+import { Testimonies } from "/imports/api/testimonies.js";
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import Helmet, { HelmetProvider } from 'react-helmet-async';
-import ArticleEditor from '/imports/ui/soulFood/ArticleEditor.js';
-import ArticleImage from '/imports/ui/soulFood/ArticleImage.js';
+import TestimonyEditor from '/imports/ui/soulFood/testimonies/TestimonyEditor.js';
+import TestimonyImage from '/imports/ui/soulFood/testimonies/TestimonyImage.js';
 import NotFound from '/imports/ui/layouts/NotFound.js'
 import { Roles } from 'meteor/alanning:roles';
 
@@ -18,7 +18,7 @@ const buttonStyle = {
 const months = ['January', 'Febuary', 'March', 'April', 'May', 'June',
 				'July', 'August', 'September', 'October', 'November', 'December'];
 
-class ArticleContent extends Component {	
+class TestimonyContent extends Component {	
 	constructor(props) {
 		super(props); //No props here
 		this.state = { status: false }
@@ -60,9 +60,9 @@ class ArticleContent extends Component {
 
 	render() {
 		let isAdmin = Roles.userIsInRole(this.props.currentUser, 'admin');
-		//To fix the async problem for this.props.article
-		//Add a check, to see if the article is loaded first
-		if(!this.props.article) {
+		//To fix the async problem for this.props.testimony
+		//Add a check, to see if the testimony is loaded first
+		if(!this.props.testimony) {
 			return (
 				<div>
 					<NotFound />
@@ -75,17 +75,17 @@ class ArticleContent extends Component {
 				<div>
 					<HelmetProvider>
 	          <Helmet>
-	            <title>{this.props.article.title}</title>
+	            <title>{this.props.testimony.title}</title>
 	          </Helmet>
 	        </HelmetProvider>
 					<TopNavBar />
 					{this.state.status ? 
 						<div>
 							<div>
-								<ArticleImage article={this.props.article} /> 
+								<TestimonyImage testimony={this.props.testimony} /> 
 							</div>
 							<div> 
-								<ArticleEditor article={this.props.article}/> 
+								<TestimonyEditor testimony={this.props.testimony}/> 
 							</div>
 							
 						</div>
@@ -93,18 +93,16 @@ class ArticleContent extends Component {
 					{this.renderShowHideButton()}
 					<div className="row">
 	    			<div className="col-md-8 col-md-offset-2">
-	    				<div dangerouslySetInnerHTML={{__html: this.props.article.mainImage }}></div>
-	    				<h1>{this.props.article.title}</h1>
-	    				<small>Written by: {this.props.article.author} on {this.props.article.createdAt.getDate()} {months[this.props.article.createdAt.getMonth()]} {this.props.article.createdAt.getFullYear()}</small>
+	    				<div dangerouslySetInnerHTML={{__html: this.props.testimony.mainImage }}></div>
+	    				<h1>{this.props.testimony.title}</h1>
+	    				<small>Written by: {this.props.testimony.author} on {this.props.testimony.createdAt.getDate()} {months[this.props.testimony.createdAt.getMonth()]} {this.props.testimony.createdAt.getFullYear()}</small>
 	    				<br />
 
-	    				<div className="article-content" 
-	    						dangerouslySetInnerHTML={{__html: this.props.article.content }}>
+	    				<div className="testimony-content" 
+	    						dangerouslySetInnerHTML={{__html: this.props.testimony.content }}>
 	    				</div>
 	    			</div>
-	    			
-					</div> 
-
+					</div>
 				</div>
 			)
 		} else {
@@ -112,20 +110,20 @@ class ArticleContent extends Component {
 					<div>
 						<HelmetProvider>
 		          <Helmet>
-		            <title>{this.props.article.title}</title>
+		            <title>{this.props.testimony.title}</title>
 		          </Helmet>
 		        </HelmetProvider>
 						<TopNavBar />
 
 						<div className="row">
 		    			<div className="col-md-8 col-md-offset-2">
-		    				<div dangerouslySetInnerHTML={{__html: this.props.article.mainImage }}></div>
-		    				<h1>{this.props.article.title}</h1>
-		    				<small>Written by: {this.props.article.author} on {this.props.article.createdAt.toLocaleDateString()} </small>
+		    				<div dangerouslySetInnerHTML={{__html: this.props.testimony.mainImage }}></div>
+		    				<h1>{this.props.testimony.title}</h1>
+		    				<small>Written by: {this.props.testimony.author} on {testimony.createdAt.getDate()} {months[testimony.createdAt.getMonth()]} {testimony.createdAt.getFullYear()} </small>
 		    				<br />
 
-		    				<div className="article-content" 
-		    						dangerouslySetInnerHTML={{__html: this.props.article.content }}>
+		    				<div className="testimony-content" 
+		    						dangerouslySetInnerHTML={{__html: this.props.testimony.content }}>
 		    				</div>
 		    			</div>
 						</div>
@@ -137,11 +135,11 @@ class ArticleContent extends Component {
 
 export default withTracker(() => {
   //Or...this.props.params.id
-  let articleId = FlowRouter.getParam('id');
+  let testimonyId = FlowRouter.getParam('id');
   //First subscribe based on id
-  Meteor.subscribe('articles');
+  Meteor.subscribe('testimonies');
   return {
-    article: Articles.findOne(articleId),
+    testimony: Testimonies.findOne(testimonyId),
     currentUser: Meteor.user()
   }
-})(ArticleContent);
+})(TestimonyContent);
