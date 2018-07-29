@@ -18,7 +18,7 @@ class FamilyPage extends Component {
 
 				  <hr className = "gradient" />
 				  
-				  <p className = "text-center">
+				  <p className = "homebody">
 				   We began as strangers, that have now grown in friendship, and are now growing in faith and as one big family. It is amazing how Faith constantly gathers us together, and we pray that we continue to grow as one united heart as the Lord leads us. To find out more about our communities, read on! </p>
 
 				</div>
@@ -33,7 +33,7 @@ class FamilyPage extends Component {
 
 				        <img className = "familyimg" src="https://i.imgur.com/Mhlz9lh.png" alt="Random Name"/>
 
-				        <h5 className = "text-center"> Date:Every Saturday <br/> Time: 10am to 12pm <br/> Venue: Office for Young People </h5>
+				        <h5 className = "text-center"> Date: Every Saturday <br/> Time: 10am to 12pm <br/> Venue: Office for Young People </h5>
 
 				        {/* <p className = "text-center"> <a href="#" className="btn btn-default" role="button">Find Out More</a></p> */}
 				      </div>
