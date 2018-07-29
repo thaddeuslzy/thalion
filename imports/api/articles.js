@@ -39,8 +39,17 @@ Meteor.methods({
     });
 	},
 
-	//articles.updateImage
-	//articles.updateContent
+	'articles.updateContent'(articleId, content) {
+		Articles.update(articleId, {
+			$set: {content}
+		})
+	},
+	
+	'articles.updateImage'(articleId, mainImage) {
+		Articles.update(articleId, {
+			$set: {mainImage}
+		})
+	},
 
 	'articles.remove'(articleId) {
 		//check(eventId, String);

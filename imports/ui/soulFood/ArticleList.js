@@ -44,7 +44,7 @@ class ArticleList extends Component {
                 <div className="d-flex w-100 justify-content-between">
                   {/*<h4 className="mb-1">{event.title}</h4>*/}
                   <p>
-                  <a className="article-name" href='#'>{article.title}</a> <br />
+                  <a className="article-name" href={`/articles/${article._id}`}>{article.title}</a> <br />
 
                   <small>Author: {article.author}</small> <br />
                   <small>

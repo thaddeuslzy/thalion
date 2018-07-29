@@ -1,1 +1,0 @@
-//React Quill component that only has add image option

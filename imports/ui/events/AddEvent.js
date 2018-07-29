@@ -13,7 +13,8 @@ class AddEvent extends Component {
     const event = {
       title: props.event.title,
       description: props.event.description,
-      date: props.event.date
+      date: props.event.date,
+      cost: props.event.cost
     };
     this.state = { 
       event: event,
@@ -50,15 +51,15 @@ class AddEvent extends Component {
     event.preventDefault();
 
     //destructuring the state
-    const { title, description, date } = this.state.event;
+    const { title, description, date, cost } = this.state.event;
 
     // checks whether it is an update
     //if not when you hit the submit button it inserts a new event into the db
     if (!this.props.isUpdating) {
-      Meteor.call('events.insert', title, description, date);
+      Meteor.call('events.insert', title, description, date, cost);
     } else {
       // if the flag isUpdating is true it updates an existing event with changes made
-      Meteor.call('events.update', this.state.event._id, title, description, date);
+      Meteor.call('events.update', this.state.event._id, title, description, date, cost);
       // it then sets flag back to false
       this.setState({
         isUpdating: false
@@ -128,6 +129,18 @@ class AddEvent extends Component {
                   placeholder="<day> <month> <year> <time>"
                   name="date"
                   value={event.date ? event.date : ""}
+                  onChange={this.handleChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Cost:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter cost"
+                  name="cost"
+                  value={event.cost ? event.cost : ""}
                   onChange={this.handleChange}
                 />
               </div>
