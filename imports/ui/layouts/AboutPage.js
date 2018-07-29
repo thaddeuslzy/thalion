@@ -13,7 +13,7 @@ class AboutPage extends Component {
 				</HelmetProvider>
 				<TopNavBar />
 
-				<div class = "jumbotron">
+				<div class = "jumbotron aboutback">
 				  <h2 class = "homehead" > ABOUT US </h2>
 
 				  <hr class = "gradient" />

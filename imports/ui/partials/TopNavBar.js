@@ -36,7 +36,9 @@ class TopNavBar extends Component {
 			        <span className="icon-bar"></span>
 			        <span className="icon-bar"></span>
 			      </button>
-			      <a className="navbar-brand" onClick={() => FlowRouter.go('/')}>Office For Young People</a>
+
+			      <a href="/"><img class = "logo" src="https://i.imgur.com/aEiGxYh.png" title="OYP Logo" alt="OYP Logo"/></a>
+			 
 			    </div>
 
 			    {/*Collect the nav links, forms, and other content for toggling*/}

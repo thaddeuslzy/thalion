@@ -19,7 +19,7 @@ class HomePage extends Component {
 
 				<TopNavBar />
 				
-				<div className="jumbotron">
+				<div className="jumbotron homeback">
 				  <h2>OFFICE FOR YOUNG PEOPLE: RAISING UP A GENERATION FOR CHRIST</h2>
 
 				  <hr class = "gradient" />

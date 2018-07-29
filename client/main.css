@@ -47,6 +47,18 @@ a {
   cursor: pointer;
 }
 
+img.logo {
+  height: 80px;
+  max-width: 250px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+img.school {
+  max-height: 40%;
+  max-width: 40%;
+}
+
 
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -55,26 +67,104 @@ a {
 
 /* HomePage */
 .jumbotron {
+  min-height: 300px;
   padding-top: 70px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
   text-align: center;
-  background-image: url(/images/background1.jpg);
+  color: black;
 }
 
+.jumbotron.homeback {
+  padding-top: 70px; /*bootstrap navbar is 50px */
+  margin-top: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/hgJ3TaA.jpg");
+}
+
+.jumbotron.aboutback {
+  padding-top: 70px; /*bootstrap navbar is 50px */
+  margin-top: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/WCGJdXb.jpg");
+}
+
+.jumbotron.eventback {
+  padding-top: 70px; /*bootstrap navbar is 50px */
+  margin-top: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/ykOu2xG.jpg");
+  background-repeat: no-repeat;
+}
+
+.jumbotron.eventform {
+  padding-top: 70px; /*bootstrap navbar is 50px */
+  margin-top: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/ykOu2xG.jpg");
+  background-repeat: no-repeat;
+}
+
+.jumbotron.familyback {
+  padding-top: 70px; /*bootstrap navbar is 50px */
+  margin-top: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/QSdyFAv.jpg");
+  background-repeat: no-repeat;
+}
+
+.familyimg {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  display: block;
+  width: 50%;
+  height: auto;
+}
 
 .captionbody {
   font-size: 18px;
   color: #777;
-  
+}
+
+.captionmain {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .homebody {
   display: flex;
   padding-left: 10px;
   padding-right: 10px;
-  color: grey;
   justify-content: center;
 }
 
