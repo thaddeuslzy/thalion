@@ -36,7 +36,9 @@ class TopNavBar extends Component {
 			        <span className="icon-bar"></span>
 			        <span className="icon-bar"></span>
 			      </button>
-			      <a className="navbar-brand" onClick={() => FlowRouter.go('/')}>Office For Young People</a>
+
+			      <a href="/"><img className = "logo" src="https://i.imgur.com/aEiGxYh.png" title="OYP Logo" alt="OYP Logo"/></a>
+			 
 			    </div>
 
 			    {/*Collect the nav links, forms, and other content for toggling*/}
@@ -44,6 +46,7 @@ class TopNavBar extends Component {
 			      <ul className="nav navbar-nav">
 			        
 			        <li><a onClick={() => FlowRouter.go('/about')}>About Us</a></li>
+
 			        <li><a onClick={() => FlowRouter.go('/events')}>Events</a></li>
 
 			        <li className="dropdown">
@@ -55,7 +58,7 @@ class TopNavBar extends Component {
 			        </li>
 
 			        <li className="dropdown">
-			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family</a>
+			          <a onClick={() => FlowRouter.go('/family')} className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family</a>
 			          <ul className="dropdown-menu">
 			            <li><a href="#">Come As You Are</a></li>
 			            <li><a href="#">Polytechnic Communities</a></li>

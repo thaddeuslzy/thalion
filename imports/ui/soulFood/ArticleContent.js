@@ -11,7 +11,7 @@ import NotFound from '/imports/ui/layouts/NotFound.js'
 import { Roles } from 'meteor/alanning:roles';
 
 const buttonStyle = {
-  margin: "10px 15px",
+  margin: "20px 15px",
   maxWidth: "120px"
 }
 
@@ -121,7 +121,7 @@ class ArticleContent extends Component {
 		    			<div className="col-md-8 col-md-offset-2">
 		    				<div dangerouslySetInnerHTML={{__html: this.props.article.mainImage }}></div>
 		    				<h1>{this.props.article.title}</h1>
-		    				<small>Written by: {this.props.article.author} on {this.props.article.createdAt.toLocaleDateString()} </small>
+		    				<small>Written by: {this.props.article.author} on {this.props.article.createdAt.getDate()} {months[this.props.article.createdAt.getMonth()]} {this.props.article.createdAt.getFullYear()}</small>
 		    				<br />
 
 		    				<div className="article-content" 

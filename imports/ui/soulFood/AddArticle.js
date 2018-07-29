@@ -93,7 +93,7 @@ class AddArticle extends Component {
     if (isAdmin) {
       return (
         <div>
-          <div className="jumbotron" style={{ margin: "0 250px" }}>
+          <div className="jumbotron" style={{ margin: "0 50px" }}>
             <form onSubmit={this.handleSubmit}>
 
               <div className="form-group">

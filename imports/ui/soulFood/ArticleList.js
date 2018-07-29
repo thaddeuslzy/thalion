@@ -47,7 +47,7 @@ class ArticleList extends Component {
     return (
       <div className="articles-container">
         <div className="page-header">
-          <h1 className="article-head" style={{ margin: "20px 100px"}}>Articles</h1>
+          
         </div>
         {
           this.props.articles.length ? this.props.articles.map((article) => (

@@ -11,7 +11,7 @@ import NotFound from '/imports/ui/layouts/NotFound.js'
 import { Roles } from 'meteor/alanning:roles';
 
 const buttonStyle = {
-  margin: "10px 15px",
+  margin: "20px 15px",
   maxWidth: "120px"
 }
 
@@ -119,7 +119,7 @@ class TestimonyContent extends Component {
 		    			<div className="col-md-8 col-md-offset-2">
 		    				<div dangerouslySetInnerHTML={{__html: this.props.testimony.mainImage }}></div>
 		    				<h1>{this.props.testimony.title}</h1>
-		    				<small>Written by: {this.props.testimony.author} on {testimony.createdAt.getDate()} {months[testimony.createdAt.getMonth()]} {testimony.createdAt.getFullYear()} </small>
+		    				<small>Written by: {this.props.testimony.author} on {this.props.testimony.createdAt.getDate()} {months[this.props.testimony.createdAt.getMonth()]} {this.props.testimony.createdAt.getFullYear()} </small>
 		    				<br />
 
 		    				<div className="testimony-content" 

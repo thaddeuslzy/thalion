@@ -1,11 +1,14 @@
 /*@import '/imports/ui/stylesheets/ListEvents.css'; //Fix this imports function */
 
 body {
-  font-family: sans-serif;
+  font-family: avenir;
   /*background-color: F5FFFA;*/
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-  background-attachment: fixed;
+  /* background-color: white;
+  background-attachment: fixed; */
+
+  background-color: white;
+  /* background-image: linear-gradient(to bottom, #C2C2C2, #918e82 100%); */
+  background-attachment: fixed; 
 
   color: black;
 
@@ -30,11 +33,8 @@ h1.event-head {
 
 /*End of events*/
 
-/*EventEditor */
-.editor {
-  width: 80%;
-}
-/*End of EventEditor*/
+
+/*End of ArticleImage and TestimonyImage editor */
 
 /*EventDetails*/
 /*End of EventDetails*/
@@ -44,13 +44,154 @@ a {
   cursor: pointer;
 }
 
+img.logo {
+  max-height: 60px;
+  max-width: 200px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+img.school {
+  max-height: 40%;
+  max-width: 40%;
+}
+
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 /*End of top navbar */
 
 /* HomePage */
+.jumbotron {
+  min-height: 300px;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.jumbotron.homeback {
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/hgJ3TaA.jpg");
+}
+
+.jumbotron.aboutback {
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/WCGJdXb.jpg");
+}
+
+.jumbotron.eventback {
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/ykOu2xG.jpg");
+  background-repeat: no-repeat;
+}
+
+.jumbotron.articleback {
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/oBtNWKi.jpg");
+  background-repeat: no-repeat;
+}
+
+.jumbotron.familyback {
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url("https://i.imgur.com/6WkfMq8.png?1");
+  background-repeat: no-repeat;
+}
+
+.familyimg {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.captionbody {
+  font-size: 18px;
+  color: #777;
+}
+
+.captionmain {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.homebody {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+}
+
+.homehead {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+}
+
+hr.gradient {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
 /* End of HomePage */
+
+/* Button and Thumbnail */
+
+.thumbnail {
+  border: none;
+  border-radius: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.thumbnail p {
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #777;
+  color: lightgrey;
+  border-radius: 0;
+  transition: .2s;
+}
+.btn:hover, .btn:focus {
+  border: 1px solid #333;
+  background-color: lightgrey;
+  color: darkgrey;
+}
+/* End of Buttong and Thumbnail */
 
 /*Login buttons*/
 #login-buttons {
@@ -66,3 +207,20 @@ img {
   height: auto;
 }
 /*End of image*/
+
+/* About page individual photo frames */
+.profile {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+}
+.person:hover {
+  border-color: #f1f1f1;
+}

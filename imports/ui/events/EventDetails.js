@@ -10,7 +10,7 @@ import NotFound from '/imports/ui/layouts/NotFound.js'
 import { Roles } from 'meteor/alanning:roles';
 
 const buttonStyle = {
-  margin: "10px 40px",
+  margin: "20px 40px",
   maxWidth: "120px"
 }
 

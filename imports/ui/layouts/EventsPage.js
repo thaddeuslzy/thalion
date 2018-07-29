@@ -42,6 +42,17 @@ class EventsPage extends Component {
         {/*We pass down the event and isUpdating flag as props in the AddEvent component*/}
         <TopNavBar />
 
+        <div className = "jumbotron aboutback">
+          <h2 className = "homehead" > EVENTS </h2>
+
+          <hr className = "gradient" />
+          
+          <p className = "homebody">
+           The Office for Young People reaches out to young people aged between 16 (post-confirmation) to 35 years, including those in local universities, tertiary institutions, and young working adults in non-parish based communities. It is an exciting time for us as we connect with them, discerning new areas and new ways of meeting their needs for ministry and pastoral care, through running retreats, etc as well as journeying and one-on-one ministry. Our hearts desire is to facilitate their encounter with Jesus Christ, drawing them into greater communion as the Church and harnessing their energy for Gods Kingdom. </p>
+
+        </div>
+
+        
         <AddEvent
           event={this.state.event}
           isUpdating={this.state.isUpdating}
@@ -52,6 +63,7 @@ class EventsPage extends Component {
           <pre>DB Stuff: {JSON.stringify(this.props, null, " ")} </pre>
         */}
         <ListEvents handleEdit={this.handleEdit} />
+
       </div>
     );
   }
