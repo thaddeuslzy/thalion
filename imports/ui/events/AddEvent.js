@@ -93,7 +93,7 @@ class AddEvent extends Component {
     if (isAdmin) {
       return (
         <div>
-          <div className="jumbotron eventform" >
+          <div className="jumbotron" style={{ margin: "0 50px" }}>
             <form onSubmit={this.handleSubmit}>
 
               <div className="form-group">

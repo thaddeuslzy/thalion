@@ -52,6 +52,16 @@ class ArticlesPage extends Component {
 						</Helmet>
 					</HelmetProvider>
 					<TopNavBar />
+
+					<div class = "jumbotron articleback">
+				  <h2 class = "homehead" > ARTICLES</h2>
+
+				  <hr class = "gradient" />
+				  
+				  <p class = "text-center"> </p>
+
+				</div>
+
 				<AddArticle article={this.state.article}
 										isUpdating={this.state.isUpdating}/>
 

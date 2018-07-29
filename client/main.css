@@ -1,7 +1,7 @@
 /*@import '/imports/ui/stylesheets/ListEvents.css'; //Fix this imports function */
 
 body {
-  font-family: sans-serif;
+  font-family: avenir;
   /*background-color: F5FFFA;*/
   /* background-color: white;
   background-attachment: fixed; */
@@ -12,7 +12,7 @@ body {
 
   color: black;
 
-  padding-top: 10px;
+  padding-top: 20px;
   margin-bottom: 50px;
 
   font-size: 14px;
@@ -35,7 +35,10 @@ h1.event-head {
 
 /*EventEditor */
 .editor {
-  width: 80%;
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
 }
 /*End of EventEditor*/
 
@@ -48,8 +51,8 @@ a {
 }
 
 img.logo {
-  height: 80px;
-  max-width: 250px;
+  max-height: 60px;
+  max-width: 200px;
   vertical-align: middle;
   align-items: center;
 }
@@ -66,11 +69,9 @@ img.school {
 /*End of top navbar */
 
 /* HomePage */
-<<<<<<< HEAD
-=======
 .jumbotron {
   min-height: 300px;
-  padding-top: 70px; /*bootstrap navbar is 50px */
+  padding-top: 40px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
@@ -79,7 +80,7 @@ img.school {
 }
 
 .jumbotron.homeback {
-  padding-top: 70px; /*bootstrap navbar is 50px */
+  padding-top: 20px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
@@ -91,7 +92,7 @@ img.school {
 }
 
 .jumbotron.aboutback {
-  padding-top: 70px; /*bootstrap navbar is 50px */
+  padding-top: 20px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
@@ -103,7 +104,7 @@ img.school {
 }
 
 .jumbotron.eventback {
-  padding-top: 70px; /*bootstrap navbar is 50px */
+  padding-top: 20px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
@@ -115,8 +116,8 @@ img.school {
   background-repeat: no-repeat;
 }
 
-.jumbotron.eventform {
-  padding-top: 70px; /*bootstrap navbar is 50px */
+.jumbotron.articleback {
+  padding-top: 20px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
@@ -124,12 +125,12 @@ img.school {
   color: black;
   background-size: 100% auto;
   background-position: center;
-  background-image: url("https://i.imgur.com/ykOu2xG.jpg");
+  background-image: url("https://i.imgur.com/oBtNWKi.jpg");
   background-repeat: no-repeat;
 }
 
 .jumbotron.familyback {
-  padding-top: 70px; /*bootstrap navbar is 50px */
+  padding-top: 20px; /*bootstrap navbar is 50px */
   margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
@@ -137,7 +138,7 @@ img.school {
   color: black;
   background-size: 100% auto;
   background-position: center;
-  background-image: url("https://i.imgur.com/QSdyFAv.jpg");
+  background-image: url("https://i.imgur.com/6WkfMq8.png?1");
   background-repeat: no-repeat;
 }
 
@@ -182,7 +183,6 @@ hr.gradient {
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
->>>>>>> 0bbdcaede808c31efec9864bcbcdd91fb61ae30b
 /* End of HomePage */
 
 /* Button and Thumbnail */
@@ -226,8 +226,6 @@ img {
   height: auto;
 }
 /*End of image*/
-<<<<<<< HEAD
-=======
 
 /* About page individual photo frames */
 .profile {
@@ -245,5 +243,3 @@ img {
 .person:hover {
   border-color: #f1f1f1;
 }
-
->>>>>>> 0bbdcaede808c31efec9864bcbcdd91fb61ae30b
