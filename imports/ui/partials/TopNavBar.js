@@ -37,7 +37,7 @@ class TopNavBar extends Component {
 			        <span className="icon-bar"></span>
 			      </button>
 
-			      <a href="/"><img class = "logo" src="https://i.imgur.com/aEiGxYh.png" title="OYP Logo" alt="OYP Logo"/></a>
+			      <a href="/"><img className = "logo" src="https://i.imgur.com/aEiGxYh.png" title="OYP Logo" alt="OYP Logo"/></a>
 			 
 			    </div>
 
@@ -53,14 +53,13 @@ class TopNavBar extends Component {
 			          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Soul Food</a>
 			          <ul className="dropdown-menu">
 			            <li><a href="/articles">Articles</a></li>
-			            <li><a href="#">OYP Bulletin</a></li>
-			            <li><a href="#">Testimonies</a></li>
-			            <li><a href="#">Recommended Resources</a></li>
-			            <li><a href="#">Videos</a></li>
+			            <li><a href="/testimonies">Testimonies</a></li>
 			          </ul>
 			        </li>
 
-			        <li className="dropdown">
+			       	<li><a onClick={() => FlowRouter.go('/family')}>OYP Family</a></li>
+
+			        {/* <li className="dropdown">
 			          <a onClick={() => FlowRouter.go('/family')} className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OYP Family</a>
 			          <ul className="dropdown-menu">
 			            <li><a href="#">Come As You Are</a></li>
@@ -69,7 +68,7 @@ class TopNavBar extends Component {
 			            <li><a href="#">Working Adult Communities</a></li>
 			            <li><a href="#">Vinea Domini</a></li>
 			          </ul>
-			        </li>
+			        </li> */}
 			      </ul>
 			      
 			      <ul className="nav navbar-nav navbar-right">

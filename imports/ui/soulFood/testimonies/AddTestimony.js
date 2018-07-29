@@ -1,24 +1,24 @@
-//Form to add a new article
+//Form to add a new testimony
 import React, { Component } from "react";
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Roles } from 'meteor/alanning:roles';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // ES6
-import { Articles } from "/imports/api/articles.js";
+import { Testimonies } from "/imports/api/testimonies.js";
 
 //Main Form should include: title, author, short description
-//article image, content is in the other file
-class AddArticle extends Component {
+//testimony image, content is in the other file
+class AddTestimony extends Component {
 	constructor(props) {
     super(props);
-    const article = {
-      title: props.article.title,
-      description: props.article.author,
-      date: props.article.description
+    const testimony = {
+      title: props.testimony.title,
+      description: props.testimony.author,
+      date: props.testimony.description
     };
     this.state = { 
-      article: article,
+      testimony: testimony,
       isUpdating: props.isUpdating
     }
     //this.handleChange = this.handleChange.bind(this);
@@ -27,7 +27,7 @@ class AddArticle extends Component {
   // React Lifecycle method that runs when props are updated and sets them into state
   componentWillReceiveProps(nextProps) {
     this.setState({
-      article: nextProps.article,
+      testimony: nextProps.testimony,
       isUpdating: nextProps.isUpdating
     });
   }
@@ -39,11 +39,11 @@ class AddArticle extends Component {
     // that's updated depending on which field has changed
     // we use square braces around the key `field` coz its a variable 
     // (we are setting state with a dynamic key name)
-    const newArticle = Object.assign({}, this.state.article, {[field]: event.target.value});
+    const newTestimony = Object.assign({}, this.state.testimony, {[field]: event.target.value});
 
     // we then set new event object into state
     this.setState({
-      article: newArticle
+      testimony: newTestimony
     })
   }
 
@@ -51,45 +51,45 @@ class AddArticle extends Component {
     event.preventDefault();
 
     //destructuring the state
-    const { title, author, description } = this.state.article;
+    const { title, author, description } = this.state.testimony;
 
     // checks whether it is an update
     //if not when you hit the submit button it inserts a new event into the db
     if (!this.props.isUpdating) {
-      Meteor.call('articles.insert', title, author, description);
+      Meteor.call('testimonies.insert', title, author, description);
     } else {
       // if the flag isUpdating is true it updates an existing event with changes made
-      Meteor.call('articles.update', this.state.article._id, title, author, description);
+      Meteor.call('testimonies.update', this.state.testimony._id, title, author, description);
       // it then sets flag back to false
       this.setState({
         isUpdating: false
       })
     }
 
-    const newArticle = {
+    const newTestimony = {
       title: "",
       author: "",
       description: ""
     }
 
     this.setState({
-      article: newArticle
+      testimony: newTestimony
     })
   }
 
   renderSubmitButton() {
     // renders submit button dynamically depending on whether isUpdating flag is true/false
     if(this.state.isUpdating) {
-      return ( <button type="submit" className="btn btn-primary">Update This Article</button> );
+      return ( <button type="submit" className="btn btn-primary">Update This Testimony</button> );
     }
-      return( <button type="submit" className="btn btn-primary">Add Article</button> );
+      return( <button type="submit" className="btn btn-primary">Add Testimony</button> );
   }
 
   render() {
-    const { article } = this.state;
+    const { testimony } = this.state;
     let isAdmin = Roles.userIsInRole(this.props.currentUser, 'admin');
 
-    //Only show the AddArticle form to admin user
+    //Only show the AddTestimony form to admin user
     if (isAdmin) {
       return (
         <div>
@@ -101,9 +101,9 @@ class AddArticle extends Component {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Enter article title"
+                  placeholder="Enter testimony title"
                   name="title"
-                  value={article.title ? article.title : ""}
+                  value={testimony.title ? testimony.title : ""}
                   onChange={this.handleChange}
                 />
               </div>
@@ -115,7 +115,7 @@ class AddArticle extends Component {
                   className="form-control"
                   placeholder="Enter author's name"
                   name="author"
-                  value={article.author ? article.author : ""}
+                  value={testimony.author ? testimony.author : ""}
                   onChange={this.handleChange}
                 />
               </div>
@@ -126,9 +126,9 @@ class AddArticle extends Component {
                 <textarea
                 rows="4" cols="50" 
                 className="form-control"
-                placeholder="Enter article description"
+                placeholder="Enter testimony description"
                 name="description"
-                value={article.description ? article.description : ""}
+                value={testimony.description ? testimony.description : ""}
                 onChange={this.handleChange}
                 > </textarea>
               </div>
@@ -148,4 +148,4 @@ export default withTracker(() => {
   return {
     currentUser: Meteor.user()
   }
-})(AddArticle);
+})(AddTestimony);

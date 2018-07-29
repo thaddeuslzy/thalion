@@ -1,42 +1,31 @@
-//List of articles
+//List of testimonies
 import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import { Articles } from "/imports/api/articles.js";
+import { Testimonies } from "/imports/api/testimonies.js";
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import classnames from 'classnames';
 
 const buttonStyle = {
   margin: "10px 15px",
-  maxWidth: "120px"
+  maxWidth: "130px"
 }
 
 const months = ['January', 'Febuary', 'March', 'April', 'May', 'June',
 				'July', 'August', 'September', 'October', 'November', 'December'];
 
-const PER_PAGE = 5;
+class TestimonyList extends Component {
 
-class ArticleList extends Component {
-  /*componentWillMount() {
-    this.page = 1;
-    console.log(this.page);
-  }
 
-  handleLoadMore() {
-    Meteor.subscribe('testimonies', PER_PAGE * (this.page + 1));
-    this.page += 1;
-    console.log(this.page);
-  }*/
-
-  handleEdit = (articleId) => {
+  handleEdit = (testimonyId) => {
     // onEdit we want to have the form on AddEvents populate the fields and allow for editing
     // so we pass the eventId to the parent component so that it tells AddEvent component what data is to be displayed
-    this.props.handleEdit(articleId);
+    this.props.handleEdit(testimonyId);
   }
 
-  handleDelete = (articleId) => {
+  handleDelete = (testimonyId) => {
     // onDelete we just remove the event from the db
-    Meteor.call('articles.remove', {_id: articleId});
+    Meteor.call('testimonies.remove', {_id: testimonyId});
   }
 
   //componentWillMount --> loads data just before component is rendered; good for loading data
@@ -45,30 +34,30 @@ class ArticleList extends Component {
 
     // Use `` for ${event._id} --> takes a js expression that will be displayed as a template string
     return (
-      <div className="articles-container">
+      <div className="testimonies-container">
         <div className="page-header">
-          
+
         </div>
         {
-          this.props.articles.length ? this.props.articles.map((article) => (
-            <div className="list-group" key={article._id} style={{ margin: "20px 100px" }}>
+          this.props.testimonies.length ? this.props.testimonies.map((testimony) => (
+            <div className="list-group" key={testimony._id} style={{ margin: "20px 100px" }}>
               <div className="list-group-item list-group-item-action flex-column align-items-start">
 
-                <div className="card lg m-b-6 content_text article inverted ">                  
-                  <a className="card-link" href={`/articles/${article._id}`}>
+                <div className="card lg m-b-6 content_text testimony inverted ">                  
+                  <a className="card-link" href={`/testimonies/${testimony._id}`}>
                     <div className="card-header p-t-4" >
-                      <div dangerouslySetInnerHTML={{__html: article.mainImage }}></div>
+                      <div dangerouslySetInnerHTML={{__html: testimony.mainImage }}></div>
                     </div>
                     <div className="card-block p-x-0 p-b-0">
-                      <h2 className="card-title">{article.title}</h2>
+                      <h2 className="card-title">{testimony.title}</h2>
                     </div>
                   </a>
                 </div>
 
-                <p className="mb-1">{article.description}</p>
+                <p className="mb-1">{testimony.description}</p>
                 <p className="teaser">
                   <small>
-                    <b>{article.author}</b> | {article.createdAt.getDate()} {months[article.createdAt.getMonth()]} {article.createdAt.getFullYear()}
+                    <b>{testimony.author}</b> | {testimony.createdAt.getDate()} {months[testimony.createdAt.getMonth()]} {testimony.createdAt.getFullYear()}
                   </small>
                 </p>
 
@@ -81,26 +70,25 @@ class ArticleList extends Component {
                     data-target="#myModal"
                     type="button"
                     style={buttonStyle}
-                    onClick={() => this.handleEdit(article._id)}
+                    onClick={() => this.handleEdit(testimony._id)}
                   >
-                    Edit Article
+                    Edit Testimony
                   </button>
 
                   <button
                     className="btn btn-outline-danger col"
                     style={buttonStyle}
-                    onClick={() => this.handleDelete(article._id)}
+                    onClick={() => this.handleDelete(testimony._id)}
                   >
-                    Delete Article
+                    Delete Testimony
                   </button> 
                 </div> : ''}
-
               </div>
-
-              
+                
             </div>
           )) : ''
         }
+
         
       </div>
     );
@@ -109,13 +97,13 @@ class ArticleList extends Component {
 
 export default withTracker(() => {
   //First set up subscription
-  Meteor.subscribe('articles');
+  Meteor.subscribe('testimonies');
 
   //Return an object. Whatever we return will be sent to 
-  //ArticleList as props
+  //TestimonyList as props
   return {
   	//Sort by newest to oldest
-    articles: Articles.find({}, {sort: {createdAt: -1}}).fetch(), 
+    testimonies: Testimonies.find({}, {sort: {createdAt: -1}}).fetch(), 
     currentUser: Meteor.user()
   }
-})(ArticleList);
+})(TestimonyList);

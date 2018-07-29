@@ -42,13 +42,14 @@ class EventsPage extends Component {
         {/*We pass down the event and isUpdating flag as props in the AddEvent component*/}
         <TopNavBar />
 
+
         <div class = "jumbotron eventback">
           <h2 class = "homehead" > EVENTS </h2>
 
-          <hr class = "gradient" />
+          <hr className = "gradient" />
           
-          <p class = "homebody">
-           The Office for Young People reaches out to young people aged between 16 (post-confirmation) to 35 years, including those in local universities, tertiary institutions, and young working adults in non-parish based communities. It is an exciting time for us as we connect with them, discerning new areas and new ways of meeting their needs for ministry and pastoral care, through running retreats, etc as well as journeying and one-on-one ministry. Our hearts desire is to facilitate their encounter with Jesus Christ, drawing them into greater communion as the Church and harnessing their energy for Gods Kingdom. </p>
+          <p className = "homebody">
+           There is always something happening here at the Office for Young People as we continue to foster relationships with our young people and minister to their needs. Feel free to look around and find out more about what is going. Also, don't forget to bring a friend. All are welcome! </p>
 
         </div>
 

@@ -13,57 +13,60 @@ class AboutPage extends Component {
 				</HelmetProvider>
 				<TopNavBar />
 
-				<div class = "jumbotron aboutback">
-				  <h2 class = "homehead" > ABOUT US </h2>
+				<div className = "jumbotron aboutback">
+				  <h2 className = "homehead" > ABOUT US </h2>
 
-				  <hr class = "gradient" />
+				  <hr className = "gradient" />
 				  
-				  <p class = "homebody">
+				  <p className = "homebody">
 				   The Office for Young People reaches out to young people aged between 16 (post-confirmation) to 35 years, including those in local universities, tertiary institutions, and young working adults in non-parish based communities. It is an exciting time for us as we connect with them, discerning new areas and new ways of meeting their needs for ministry and pastoral care, through running retreats, etc as well as journeying and one-on-one ministry. Our hearts desire is to facilitate their encounter with Jesus Christ, drawing them into greater communion as the Church and harnessing their energy for Gods Kingdom. </p>
 
 				</div>
 
-				<div class ="row">
-				  <div class ="col-sm-12">
-				      <div class ="caption">
-				        
-				        <h2 class = "text-center">Our Work</h2>
-				        <p class = "captionmain"> We build and strengthen relationships with the various non-parish based young adult communities, as well as make new connections and journey with young working adults as we seek to minister to their needs. </p>
+				<div className ="row">
+				  <div className ="col-sm-12">
+				      <div className ="caption">
 
-				        <div class="row">
+				        <h2 className = "text-center">Our Work</h2>
+				        <p className = "text-center"> We build and strengthen relationships with the various non-parish based young adult communities, as well as make new connections and journey with young working adults as we seek to minister to their needs. </p>
 
-				         <div class="profile">
-    							<div class="col-sm-4">
+
+				        <div className="row">
+
+				         <div className="profile">
+    							<div className="col-sm-4">
       							<h3>Events & Retreats</h3><br/>
       							<img src="https://i.imgur.com/gJa1igU.png" class="img-circle person" alt="Random Name"/>
     							</div>
 
-    							<div class="col-sm-4">
+    							<div className="col-sm-4">
       							<h3>Tertiary Ministry</h3><br/>
       							<img src="https://i.imgur.com/bq1lvVu.png" class="img-circle person" alt="Random Name"/>
     							</div>
 
-    							<div class="col-sm-4">
+    							<div className="col-sm-4">
 	      						<h3>Parish Ministry</h3><br/>
 	      						<img src="https://i.imgur.com/gG1n8vL.png" class="img-circle person" alt="Random Name"/>
     							</div>
     					   </div>
   							</div>		
+
 				      </div>
 				    </div>
 				</div>
 
-				<hr class  = "gradient" />
+				<hr className  = "gradient" />
 
-				<div class = "row">
-				  <div class = "col-sm-12">
-				     <div class = "caption">
+				<div className = "row">
+				  <div className = "col-sm-12">
+				     <div className = "caption">
 				        
 				        <h2 class = "text-center">Our Team</h2>
 				        <p class = "captionmain" > Meet our fellow brothers and sisters! </p>
 				        
 				        <div class="row">
 				         <div class="profile">
+
     							<div class="col-sm-4">
       							<h3>Juliana Aloysius</h3><br/>
       							<img src="https://i.imgur.com/PxwCPJc.png?1" class="img-circle person" alt="Random Name"/>
@@ -78,19 +81,20 @@ class AboutPage extends Component {
 	      						<h3>Fr. Brian</h3><br/>
 	      						<img src="https://i.imgur.com/LOssse3.jpg?1" class="img-circle person" alt="Random Name"/>
     							</div>
-    					   </div>
-  							</div>		     
+    					</div>
+  						</div>		     
 				    </div>
 				</div>
 		</div>
 
-		<hr class  = "gradient" />
+		<hr className  = "gradient" />
 
-				<div class = "row">
-				  <div class="col-sm-12">
-				      <div class="caption">
+				<div className = "row">
+				  <div className="col-sm-12">
+				      <div className="caption">
 				        
-				        <h2 class = "text-center"> Get in Touch</h2>
+				        <h2 className = "text-center"> Get in Touch</h2>
+				        <p className = "text-center"> Any questions? Feel free to contact us! </p>
 
 				      </div>
 				    </div>

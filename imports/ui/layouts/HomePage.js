@@ -22,48 +22,54 @@ class HomePage extends Component {
 				<div className="jumbotron homeback">
 				  <h2 class = "homehead">OFFICE FOR YOUNG PEOPLE: RAISING UP A GENERATION FOR CHRIST</h2>
 
-				  <hr class = "gradient" />
+				  <hr className = "gradient" />
 
-				  <p class = "homebody" > The Office for Young People seeks to raise up a generation of young people passionately in 
+				  <p className = "homebody" > The Office for Young People seeks to raise up a generation of young people passionately in 
 				  love with Jesus and His Church and committed to a lifestyle of discipleship and communion. 
 				  We hope that you'll make yourself at home here and explore. Don't be a stranger and do
 				  check back for news on our upcoming events, encouraging testimonies and more! </p>
 			</div>
 
-			{/* Start of Carousel
+			{/* Start of Carousel */}
 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
 			    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			    	<li data-target="#myCarousel" data-slide-to="1"></li>
 			    	<li data-target="#myCarousel" data-slide-to="2"></li>
+			    	<li data-target="#myCarousel" data-slide-to="3"></li>
 			  </ol>
 
-
 			  <div class="carousel-inner" role="listbox">
+
 			    <div class="item active">
-			      <img src='/images/background1.jpg' alt="New York"/>
+			      <img src='https://i.imgur.com/MBmoerR.png' alt="Encounter"/>
 			      <div class="carousel-caption">
-			        <h3>New York</h3>
-			        <p>The atmosphere in New York is lorem ipsum.</p>
+			        <p>Encounter God.</p>
 			      </div> 
 			    </div>
 
 			    <div class="item">
-			      <img src="chicago.jpg" alt="Chicago"/>
+			      <img src="https://i.imgur.com/xcbu7MK.png" alt="Discipleship"/>
 			      <div class="carousel-caption">
-			        <h3>Chicago</h3>
-			        <p>Thank you, Chicago - A night we won't forget.</p>
+			        <p>A life of Discipleship.</p>
 			      </div> 
 			    </div>
 
 			    <div class="item">
-			      <img src="la.jpg" alt="Los Angeles"/>
+			      <img src="https://i.imgur.com/1BS4wFX.png" alt="Communion"/>
 			      <div class="carousel-caption">
-			        <h3>LA</h3>
-			        <p>Even though the traffic was a mess, we had the best time.</p>
+			        <p>In Communion.</p>
 			      </div> 
 			    </div>
+
+			    <div class="item">
+			      <img src="https://i.imgur.com/e46eLK8.png" alt="Mission"/>
+			      <div class="carousel-caption">
+			        <p>Live the Mission.</p>
+			      </div> 
+			    </div>
+
 			  </div>
 
 
@@ -76,36 +82,37 @@ class HomePage extends Component {
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
-			End of Carousel */}
+			
+			{/* End of Carousel */}
 
-				<div class="row">
+				<div className="row">
 
-				  <div class="col-sm-6 ">
-				    <div class="thumbnail">
-				      <div class="caption">
+				  <div className="col-sm-6 ">
+				    <div className="thumbnail">
+				      <div className="caption">
 				        <h3>Our Activities</h3>
 
-				        <p class = "captionbody" >OYP hosts a range of activities every month, ranging from Retreats, Leadership Camps, Day of Recollections, Nox Gaudii, as well as Orientation Camps for University!</p>
+				        <p className = "captionbody" >OYP hosts a range of activities every month, ranging from Retreats, Leadership Camps, Day of Recollections, Nox Gaudii, as well as Orientation Camps for University!</p>
 				        
-				        <p class = "text-center"> <a href="/events" class="btn btn-default" role="button">See More</a></p>
+				        <p className = "text-center"> <a href="/events" class="btn btn-default" role="button">See More</a></p>
 				      </div>
 				    </div>
 				  </div>
 
-				  <div class="col-sm-6">
-				    <div class="thumbnail">
-				      <div class="caption">
+				  <div className="col-sm-6">
+				    <div className="thumbnail">
+				      <div className="caption">
 				        <h3>Latest Feed</h3>
 
-				        <p class = "captionbody">Our website hosts a range of resources for catholics</p>
+				        <p className = "captionbody">Our website hosts a range of resources for catholics</p>
 				        
 				        <p class = "text-center"> <a href="/articles" class="btn btn-default" role="button">See More</a></p>
+
 				      </div>
 				    </div>
 				  </div>
 
 				</div>
-
 
 				<img src="https://i.imgur.com/Lg4gyRx.png" className = "bottom-banner" alt="Random Name"/>
 
