@@ -28,7 +28,7 @@ class ArticleImage extends Component {
 
   render() {
     return (
-      <div className="image-editor">
+      <div className="editor">
       	<form onSubmit={this.handleSubmit.bind(this)}>
 	      	<div>
 	      		<ReactQuill value={this.state.image}

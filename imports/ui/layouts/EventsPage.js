@@ -42,7 +42,7 @@ class EventsPage extends Component {
         {/*We pass down the event and isUpdating flag as props in the AddEvent component*/}
         <TopNavBar />
 
-        <div class = "jumbotron aboutback">
+        <div class = "jumbotron eventback">
           <h2 class = "homehead" > EVENTS </h2>
 
           <hr class = "gradient" />

@@ -12,7 +12,7 @@ body {
 
   color: black;
 
-  padding-top: 20px;
+  padding-top: 60px;
   margin-bottom: 50px;
 
   font-size: 14px;
@@ -48,13 +48,14 @@ h1.event-head {
 /*Top Nav Bar */
 a {
   cursor: pointer;
+  font-size: 16px;
+
 }
 
 img.logo {
   max-height: 60px;
   max-width: 200px;
-  vertical-align: middle;
-  align-items: center;
+  padding-right: 10px;
 }
 
 img.school {
@@ -62,6 +63,10 @@ img.school {
   max-width: 40%;
 }
 
+img.bottom-banner{
+  padding-left: 20%;
+  padding-right: 20%;
+}
 
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -70,10 +75,9 @@ img.school {
 
 /* HomePage */
 .jumbotron {
-  min-height: 300px;
-  padding-top: 40px; /*bootstrap navbar is 50px */
-  margin-top: 40px;
+  min-height: 250px;
   border-radius: 5px;
+  padding-bottom: 10px;
   justify-content: center;
   text-align: center;
   color: black;
@@ -81,36 +85,33 @@ img.school {
 
 .jumbotron.homeback {
   padding-top: 20px; /*bootstrap navbar is 50px */
-  margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
   text-align: center;
   color: black;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-image: url("https://i.imgur.com/hgJ3TaA.jpg");
 }
 
 .jumbotron.aboutback {
   padding-top: 20px; /*bootstrap navbar is 50px */
-  margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
   text-align: center;
   color: black;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-image: url("https://i.imgur.com/WCGJdXb.jpg");
 }
 
 .jumbotron.eventback {
   padding-top: 20px; /*bootstrap navbar is 50px */
-  margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
   text-align: center;
   color: black;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-image: url("https://i.imgur.com/ykOu2xG.jpg");
   background-repeat: no-repeat;
@@ -118,12 +119,11 @@ img.school {
 
 .jumbotron.articleback {
   padding-top: 20px; /*bootstrap navbar is 50px */
-  margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
   text-align: center;
   color: black;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-image: url("https://i.imgur.com/oBtNWKi.jpg");
   background-repeat: no-repeat;
@@ -131,12 +131,11 @@ img.school {
 
 .jumbotron.familyback {
   padding-top: 20px; /*bootstrap navbar is 50px */
-  margin-top: 40px;
   border-radius: 5px;
   justify-content: center;
   text-align: center;
   color: black;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-image: url("https://i.imgur.com/6WkfMq8.png?1");
   background-repeat: no-repeat;
@@ -166,16 +165,18 @@ img.school {
 
 .homebody {
   display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
   justify-content: center;
+  font-style: bold;
 }
 
 .homehead {
   display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
   justify-content: center;
+  font-style: bold;
 }
 
 hr.gradient {

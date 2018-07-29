@@ -28,29 +28,27 @@ class AboutPage extends Component {
 				      <div class ="caption">
 				        
 				        <h2 class = "text-center">Our Work</h2>
-				        <p class = "text-center"> We build and strengthen relationships with the various non -parish based young adult communities, as well as make new connections and journey with young working adults as we seek to minister to their needs. </p>
+				        <p class = "captionmain"> We build and strengthen relationships with the various non-parish based young adult communities, as well as make new connections and journey with young working adults as we seek to minister to their needs. </p>
 
 				        <div class="row">
 
 				         <div class="profile">
     							<div class="col-sm-4">
       							<h3>Events & Retreats</h3><br/>
-      							<img src="bandmember.jpg" alt="Random Name"/>
+      							<img src="https://i.imgur.com/gJa1igU.png" class="img-circle person" alt="Random Name"/>
     							</div>
 
     							<div class="col-sm-4">
       							<h3>Tertiary Ministry</h3><br/>
-      							<img src="bandmember.jpg" alt="Random Name"/>
+      							<img src="https://i.imgur.com/bq1lvVu.png" class="img-circle person" alt="Random Name"/>
     							</div>
 
     							<div class="col-sm-4">
 	      						<h3>Parish Ministry</h3><br/>
-	      						<img src="bandmember.jpg" alt="Random Name"/>
+	      						<img src="https://i.imgur.com/gG1n8vL.png" class="img-circle person" alt="Random Name"/>
     							</div>
     					   </div>
   							</div>		
-
-				        <p class = "text-center"> <a href="#" class="btn btn-default" role="button">Find Out More</a></p>
 				      </div>
 				    </div>
 				</div>
@@ -62,23 +60,23 @@ class AboutPage extends Component {
 				     <div class = "caption">
 				        
 				        <h2 class = "text-center">Our Team</h2>
-				        <p class = "text-center" > Meet our fellow brothers and sisters! </p>
+				        <p class = "captionmain" > Meet our fellow brothers and sisters! </p>
 				        
 				        <div class="row">
 				         <div class="profile">
     							<div class="col-sm-4">
-      							<p><strong>Name</strong></p><br/>
-      							<img src="bandmember.jpg" alt="Random Name"/>
+      							<h3>Juliana Aloysius</h3><br/>
+      							<img src="https://i.imgur.com/PxwCPJc.png?1" class="img-circle person" alt="Random Name"/>
     							</div>
 
     							<div class="col-sm-4">
-      							<p><strong>Name</strong></p><br/>
-      							<img src="bandmember.jpg" alt="Random Name"/>
+      							<h3>Fr. Jude</h3><br/>
+      							<img src="https://i.imgur.com/t2snSYA.png?1" class="img-circle person" alt="Random Name"/>
     							</div>
 
     							<div class="col-sm-4">
-	      						<p><strong>Name</strong></p><br/>
-	      						<img src="bandmember.jpg" alt="Random Name"/>
+	      						<h3>Fr. Brian</h3><br/>
+	      						<img src="https://i.imgur.com/LOssse3.jpg?1" class="img-circle person" alt="Random Name"/>
     							</div>
     					   </div>
   							</div>		     
@@ -93,13 +91,52 @@ class AboutPage extends Component {
 				      <div class="caption">
 				        
 				        <h2 class = "text-center"> Get in Touch</h2>
-				        <p class = "text-center"> Any questions? Feel free to contact us! </p>
-				        <p> <a href="#" class="btn btn-default" role="button">Find Out More</a></p>
 
 				      </div>
 				    </div>
 				</div>
 
+			<div class = "row">
+				  <div class = "col-sm-12">
+				     <div class = "caption">
+				        
+				        <div class="row">
+				         <div class="profile">
+
+    							<div class="col-sm-4">
+      							<h4>General Enquiries</h4>
+      							<p class = "homebody"><br/>
+      							Tel: 6285 2571| 6286 0341<br/><br/>
+      							For general enquiries, please email us at:<br/>
+      							info.oyp@catholic.org.sg<br/><br/>
+      							Opening Hours<br/>
+      							Weekdays: 9:00am to 6:00pm
+      							</p>
+    							</div>
+
+    							<div class="col-sm-4">
+      							<h4>Retreat Bookings</h4>
+      							<p class = "homebody"><br/>
+      							For booking enquiries, please email Us at:<br/>
+      							admin.oyp@catholic.org.sg<br/><br/>
+      							Bookings can be made on Mondays, Thursdays and Fridays. Please note, the office does not operate on weekends.
+      							</p>
+    							</div>
+
+    							<div class="col-sm-4">
+	      						<h4>Visit Us</h4>
+	      						<p class = "homebody"><br/>
+	      						Office for Young People<br/><br/>
+	      						2 Lorong Low Koon, Singapore 536449<br/><br/>
+	      						Opening Hours<br/>
+	      						Weekdays: 9am – 6pm
+	      						</p>
+    							</div>
+    					   </div>
+  							</div>		     
+				    </div>
+				</div>
+		</div>
 
 			</div>
 		);

@@ -35,7 +35,7 @@ class EventEditor extends Component {
 	                  		modules={EventEditor.modules}
 	                  		formats={EventEditor.formats} />
 	        </div>
-	        <button type="submit" className="btn btn-primary">Submit Event Content</button> 
+	        <button type="submit" className="btn">Submit Event Content</button> 
         </form>
       </div>
     );

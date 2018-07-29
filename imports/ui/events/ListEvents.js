@@ -54,7 +54,7 @@ class ListEvents extends Component {
                 {isAdmin ?
                   <div className="controls row">
                   <button
-                    className="btn btn-outline-warning col"
+                    className="btn btn-default"
                     data-toggle="modal"
                     data-target="#myModal"
                     type="button"
@@ -65,7 +65,7 @@ class ListEvents extends Component {
                   </button>
 
                   <button
-                    className="btn btn-outline-danger col"
+                    className="btn btn-default"
                     style={buttonStyle}
                     onClick={() => this.handleDelete(event._id)}
                   >

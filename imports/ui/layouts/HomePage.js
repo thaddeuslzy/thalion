@@ -20,7 +20,7 @@ class HomePage extends Component {
 				<TopNavBar />
 				
 				<div className="jumbotron homeback">
-				  <h2>OFFICE FOR YOUNG PEOPLE: RAISING UP A GENERATION FOR CHRIST</h2>
+				  <h2 class = "homehead">OFFICE FOR YOUNG PEOPLE: RAISING UP A GENERATION FOR CHRIST</h2>
 
 				  <hr class = "gradient" />
 
@@ -86,7 +86,8 @@ class HomePage extends Component {
 				        <h3>Our Activities</h3>
 
 				        <p class = "captionbody" >OYP hosts a range of activities every month, ranging from Retreats, Leadership Camps, Day of Recollections, Nox Gaudii, as well as Orientation Camps for University!</p>
-				        <p class = "text-center"> <a href="#" class="btn btn-default" role="button">See More</a></p>
+				        
+				        <p class = "text-center"> <a href="/events" class="btn btn-default" role="button">See More</a></p>
 				      </div>
 				    </div>
 				  </div>
@@ -95,39 +96,21 @@ class HomePage extends Component {
 				    <div class="thumbnail">
 				      <div class="caption">
 				        <h3>Latest Feed</h3>
+
 				        <p class = "captionbody">Our website hosts a range of resources for catholics</p>
-				        <p class = "text-center"> <a href="#" class="btn btn-default" role="button">See More</a></p>
+				        
+				        <p class = "text-center"> <a href="/articles" class="btn btn-default" role="button">See More</a></p>
 				      </div>
 				    </div>
 				  </div>
 
 				</div>
 
-				<div class="row">
 
-				  <div class="col-sm-6 ">
-				    <div class="thumbnail">
-				      <div class="caption">
-				        <h3>Media</h3>
-				        <p class = "captionbody">...</p>
-				        <p class = "text-center"> <a href="#" class="btn btn-default" role="button">See More</a></p>
-				      </div>
-				    </div>
-				  </div>
-
-				  <div class="col-sm-6">
-				    <div class="thumbnail">
-				      <div class="caption">
-				        <h3>Support Us!</h3>
-				        <p class = "captionbody">...</p>
-				        <p class = "text-center"> <a href="#" class="btn btn-default" role="button">I Would Like to Support!</a></p>
-				      </div>
-				    </div>
-				  </div>
-
-				</div>
+				<img src="https://i.imgur.com/Lg4gyRx.png" className = "bottom-banner" alt="Random Name"/>
 
 			</div>
+
 
 		);
 	}	

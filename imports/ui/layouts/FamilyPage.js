@@ -18,7 +18,7 @@ class FamilyPage extends Component {
 
 				  <hr class = "gradient" />
 				  
-				  <p class = "text-center">
+				  <p class = "homebody">
 				   We began as strangers, that have now grown in friendship, and are now growing in faith and as one big family. It is amazing how Faith constantly gathers us together, and we pray that we continue to grow as one united heart as the Lord leads us. To find out more about our communities, read on! </p>
 
 				</div>
